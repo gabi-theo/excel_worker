@@ -1,0 +1,42 @@
+1.  How would you design the ETL pipeline to handle incremental data loading, ensuring that only new or modified data is processed in each run? 
+
+Resp:
+For this, we can use two timestamps fields, one for created date and another for modified date. Like this, we can handle/process only new data or the latest modified data
+
+2. Discuss the challenges and considerations involved in handling financial data from different sources with varying formats and structures. How do you ensure consistency in the integrated dataset? 
+
+Resp:
+To handle data from different sources would require a mechanism that evens the data and a common data model for financial data should be implemented across all sources. We should also create connectors for different data types and understand the format of those data.
+
+3. Explain the process you would follow to validate and clean the financial data during the ETL process, especially considering data integrity and accuracy requirements in the accounting domain.
+
+Resp:
+- Validate data against predefined rules and constraints.
+- Implement data quality checks for completeness, accuracy, and consistency.
+- Handle missing or inconsistent data through imputation or correction.
+- Implement error handling mechanism to inform us when something went wrong.
+
+4.How do you approach the automation of the ETL pipeline and reporting processes to minimize manual intervention and ensure timely delivery of financial reports? 
+
+Resp:
+- Use scheduling tools for ETL pipeline automation.
+- Automate report generation using BI tools.
+- Establish error notification and logging mechanisms for monitoring.
+- Ensure that stakeholders receive reports automatically.
+
+5. What security measures would you implement to protect sensitive financial data during the ETL process and in the generated reports? How do you ensure compliance with data privacy regulations?
+
+Resp:
+- Implement encryption for data.
+- Apply role-based access control to restrict access to sensitive data.
+- Use secure protocols (e.g. HTTPS) for data transfers.
+- Regularly update software components to address security vulnerabilities.
+- Comply with data privacy regulations (e.g. GDPR) and implement anonymization or pseudonymization where necessary.
+
+6. Discuss the scalability aspects of your solution. How would you ensure that the ETL pipeline can handle increasing volumes of financial data as the company grows?
+
+Resp:
+- Design the ETL pipeline with parallel processing capabilities to handle increased data volumes.
+- Optimize database performance through indexing and partitioning.
+- Use cloud-based solutions that can scale resources dynamically (e.g. Load Balancers) based on demand.
+- Regularly monitor and optimize the ETL process for efficiency.
